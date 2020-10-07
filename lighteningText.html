@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightening Text Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+            font-family: 'Anton', sans-serif;
+        }
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            background: #323236;
+            display: grid;
+            place-items: center;
+        }
+        .center_div{
+            font-size: 12rem;
+            width: 50%;
+            height: auto;
+
+        }
+        .center_div ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+        .center_div ul li{
+            padding-left: 3rem;
+            color: rgb(12, 9, 9);
+            animation: light 1.2s linear infinite;
+        }
+        .center_div ul li:first-child{
+            padding-left: none;
+        }
+        @keyframes light{
+            0%{
+                color: rgb(12, 9, 9);
+                text-shadow: none;
+            }
+            90%{
+                color: rgb(12, 9, 9);
+                text-shadow: none;
+            }
+            100%{
+                color: rgb(226, 101, 12);
+                text-shadow: 0 0 1rem rgb(238, 72, 31), 0 0 7rem rgb(180, 52, 21);
+            }
+        }
+        .center_div ul li:nth-child(1){
+           animation-delay: 0s;
+        }
+        .center_div ul li:nth-child(2){
+           animation-delay: .1s;
+        }
+        .center_div ul li:nth-child(3){
+           animation-delay: .2s;
+        }
+        .center_div ul li:nth-child(4){
+           animation-delay: .3s;
+        }
+        .center_div ul li:nth-child(5){
+           animation-delay: .4s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="center_div">
+            <ul>
+                <li>N</li>
+                <li>I</li>
+                <li>T</li>
+                <li>I</li>
+                <li>N</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

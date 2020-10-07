@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center_div{
+            width: 500px;
+            height: 500px;
+            background-color: rgba(17, 17, 17, 0.8);
+            border-radius: 20px;
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.8));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .center_div h1{
+            position: absolute;
+            top: 15px;
+            font-size: 55px;
+            color:  rgb(83, 228, 213);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            filter: drop-shadow(1px 1px 1px rgba(83, 240, 229, 0.2));
+            text-shadow: 2px 2px 0 rgba(32, 184, 179, 0.5);
+            opacity: 0;
+            animation: opac 2.2s linear forwards;
+        }
+        @keyframes opac{
+            0%{
+                opacity: 0;
+                transform: scale(2,1);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1,1);
+            }
+        }
+        .react{
+            width: 120px;
+            height: 300px;
+            background: transparent;
+            border: 13px solid rgb(83, 228, 213);
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.8));
+            border-radius: 50%;
+            position: absolute;
+            z-index: 22;
+        }
+        .react1{
+            animation: rotate1 2s linear 2s forwards;
+        }
+        @keyframes rotate1{
+            100%{
+                transform: rotate(90deg); 
+            }
+        }
+        .react2{
+            animation: rotate2 2s linear 2s forwards;
+        }
+        @keyframes rotate2{
+            100%{
+                transform: rotate(30deg); 
+            }
+        }
+        .react3{
+            animation: rotate3 2s linear 2s forwards;
+        }
+        @keyframes rotate3{
+            100%{
+                transform: rotate(-30deg); 
+            }
+        }
+        .center{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgb(83, 228, 213);
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.8));
+            animation: sca 2s linear 2s forwards;
+            opacity: 0;
+        }
+        @keyframes sca{
+            0%{
+                transform: scale(1,1);
+            }
+            50%{
+                transform: scale(3,3);
+                opacity: 0.5;
+            }
+            100%{
+                transform: scale(1,1);
+                opacity: 1;
+            }
+        }
+    </style>
+  </head>
+  <body>
+      <div class="main_div">
+        <div class="center_div">
+            <h1>REACT</h1>
+            <div class="center"></div>
+            <div class="react react1"></div>
+            <div class="react react2"></div>
+            <div class="react react3"></div>
+        </div>
+      </div>
+    
+  </body>
+</html>

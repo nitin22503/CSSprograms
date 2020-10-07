@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mustache</title>
+    <style>
+      .mostache {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        position: absolute;
+        color: black;
+        left: 20%;
+        /* box shadow makes two new box */
+        box-shadow: 150px 240px 0 0 currentColor, 300px 240px 0 0 currentColor;
+      }
+      .mostache::before {
+        content: "";
+        position: absolute;
+        left: 30px;
+        top: 120px;
+        width: 210px;
+        height: 120px;
+        border-bottom: solid 180px currentColor;
+        border-radius: 0 0 0 100%;
+        transform: rotate(-40deg);
+        transform-origin: right 210px;
+        animation: shakeLeft 1s ease-in-out infinite;
+      }
+      .mostache::after {
+        content: "";
+        position: absolute;
+        left: 390px;
+        top: 120px;
+        width: 210px;
+        height: 120px;
+        border-bottom: solid 180px currentColor;
+        border-radius: 0 0 100% 0;
+        transform: rotate(40deg);
+        transform-origin: left 210px;
+        animation: shakeRight 1s ease-in-out infinite;
+      }
+      @keyframes shakeLeft {
+        0% {
+          transform: rotate(-50deg);
+        }
+        50% {
+          transform: rotate(-30deg);
+        }
+        100% {
+          transform: rotate(-50deg);
+        }
+      }
+      @keyframes shakeRight {
+        0% {
+          transform: rotate(50deg);
+        }
+        50% {
+          transform: rotate(30deg);
+        }
+        100% {
+          transform: rotate(50deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mostache"></div>
+  </body>
+</html>

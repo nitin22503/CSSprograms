@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text TO Speech</title>
+    <style>
+        body{
+            background-color: #b4b4b4;;
+        }
+        .s-psw{
+            font-family: Roboto;
+            font-size: 26px;
+            line-height: 19px;
+            color:  #f2385a;
+            padding: 6px 4px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #007ff4;
+            margin-left: 40%;
+            margin-right: 40%;
+            margin-top: 15%;
+            
+        }
+        .s-btn{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 18px;
+            font-family: Roboto;
+            font-size: 20px;
+            color: #ffffff;
+            padding: 14px 24px;
+            background: #007ff4;
+            box-shadow: 0px 4px 12px rgba(43, 54, 65, 0.1);
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: 250ms ease;
+        }
+        .s-btn:hover{
+            background: #2694Fa;
+            box-shadow: 0px 4px 12px rgba(47, 155, 255, 0.1) ;
+        }
+        .s-btn:active{
+            background: #0073de;
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <input placeholder="Text to Say ......." class="s-psw" type="text" name="" id="say-input">
+    <button onclick="sayItOutLoud('say-input')" class="s-btn">Say It</button>
+    <script>
+        function sayItOutLoud(id){
+            const message = document.getElementById(id).value;
+            var speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            speech.text = message;
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>

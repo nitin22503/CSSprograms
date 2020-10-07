@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Accordion</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #666;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_accordion{
+            width: 90%;
+            height: 80vh;
+            display: flex;
+        }
+        .img{
+            flex: 1;
+            height: 100%;
+            transform: skew(5deg);
+            cursor: pointer;
+            margin: 0 2px;
+            transition: all 0.3s;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .img1{
+            background-image: url(https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+        }
+        .img2{
+            background-image: url(https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        }
+        .img3{
+            background-image: url(https://images.pexels.com/photos/1027130/pexels-photo-1027130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        }
+        .img4{
+            background-image: url(https://images.pexels.com/photos/1240892/pexels-photo-1240892.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        }
+        .img5{
+            background-image: url(https://images.pexels.com/photos/186035/pexels-photo-186035.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        }
+        .img p{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.593);
+            color: #fff;
+            transform: rotate(-90deg);
+            transform-origin: 0% 0%;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-family: "Montserrat",serif;
+            white-space: normal;
+
+        }
+        .img_accordion:hover .img{
+            transform: skew(0);
+
+        }
+        .img:hover{
+            flex: 5;
+
+        }
+        .img:hover p{
+            background-color: transparent;
+            border: 2px solid #222;
+            color: #222;
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="img_accordion">
+        <div class="img img1">
+            <p>nike potential</p>
+        </div>
+        <div class="img img2">
+            <P>Lorem, ipsum.</P>
+        </div>
+        <div class="img img3">
+            <P>Lorem, ipsum.</P>
+        </div>
+        <div class="img img4">
+            <P>Lorem, ipsum.lorem</P>
+        </div>
+        <div class="img img5">
+            <P>Lorem, ipsum.</P>
+        </div>
+    </div>
+</body>
+</html>
